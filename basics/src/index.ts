@@ -8,10 +8,12 @@ async function main() {
     model: 'gpt-4o',
     messages: [{
       role:'user',
-      content: 'How tall is mount Everest?'
-    }]
+      content: 'say something cool'
+    }],
+    frequency_penalty: 1.5
   })
   console.log(response.choices[0].message.content)
+  console.log(response.choices[1].message.content)
 }
 
 function encodePrompt() {
@@ -21,4 +23,4 @@ function encodePrompt() {
   console.log(words);
 }
 
-encodePrompt();
+main();
